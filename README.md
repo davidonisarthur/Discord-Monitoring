@@ -228,9 +228,6 @@ chmod +x bin/notifier.sh
 sudo journalctl -u rails-logger.service -n 50  # View last 50 lines
 ```
 
-## 📄 License
-
-MIT
 
 ## 👤 Author
 
