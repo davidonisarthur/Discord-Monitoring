@@ -1,0 +1,20 @@
+[Unit]
+Description=Monitor de Logs Rails(ex: Discord Notifier)
+After=network.target
+
+[Service]
+User=xita
+Group=xita
+WorkingDirectory=/home/xita/Desktop/puts_dev_monitoring/bin
+ExecStart=/usr/share/rvm/rubies/ruby-3.4.4/bin/ruby /home/xita/Desktop/puts_dev_monitoring/bin/notifier.sh
+
+Restart=always
+RestartSec=10
+
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=LANG=en_US.UTF-8
+
+EnvironmentFile=/home/xita/Desktop/puts_dev_monitoring/config/.env.development
+
+[Install]
+WantedBy=multi-user.target
